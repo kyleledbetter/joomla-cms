@@ -133,7 +133,7 @@ else
 
 <body class="site <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " ";?>" data-spy="scroll" data-target=".subhead" data-offset="87">
 	<!-- Top Navigation -->
-	<div class="navbar navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<?php if ($this->params->get('admin_menus') != '0') : ?>
@@ -181,23 +181,20 @@ else
 				<!--/.nav-collapse -->
 			</div>
 		</div>
-	</div>
+	</nav>
 	<!-- Header -->
-	<div class="header">
+	<header class="header">
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span2 container-logo">
 					<a class="logo" href="<?php echo $this->baseurl; ?>"><img src="<?php echo $logo;?>" alt="<?php echo $sitename; ?>" /></a>
 				</div>
-				<div class="span7">
+				<div class="span10">
 					<h1 class="page-title"><?php echo JHtml::_('string.truncate', $app->JComponentTitle, 40, false, false);?></h1>
-				</div>
-				<div class="span3">
-					<jdoc:include type="modules" name="searchload" style="none" />
 				</div>
 			</div>
 		</div>
-	</div>
+	</header>
 	<!-- Subheader -->
 	<a class="btn btn-subhead" data-toggle="collapse" data-target=".subhead-collapse"><?php echo JText::_('TPL_ISIS_TOOLBAR');?> <i class="icon-wrench"></i></a>
 	<div class="subhead-collapse">
@@ -217,14 +214,14 @@ else
 		<div class="row-fluid">
 			<?php if (($this->countModules('left')) && $cpanel): ?>
 			<!-- Begin Sidebar -->
-			<div id="sidebar" class="span2">
-				<div class="sidebar-nav">
+			<aside id="sidebar" class="span2">
+				<nav class="sidebar-nav">
 					<jdoc:include type="modules" name="left" style="no" />
-				</div>
-			</div>
+				</nav>
+			</aside>
 			<!-- End Sidebar -->
 			<?php endif; ?>
-			<div id="content" class="<?php echo $span;?>">
+			<section id="content" class="<?php echo $span;?>">
 				<!-- Begin Content -->
 				<jdoc:include type="modules" name="top" style="xhtml" />
 				<div class="row-fluid">
@@ -243,9 +240,9 @@ else
 				</div>
 				<jdoc:include type="modules" name="bottom" style="xhtml" />
 				<!-- End Content -->
-			</div>
+			</section>
 			<?php if (($this->countModules('right')) || $cpanel) : ?>
-			<div id="aside" class="span4">
+			<aside id="aside" class="span4">
 				<!-- Begin Right Sidebar -->
 				<?php
 				/* Load cpanel modules */
@@ -254,14 +251,14 @@ else
 				<?php endif;?>
 				<jdoc:include type="modules" name="right" style="xhtml" />
 				<!-- End Right Sidebar -->
-			</div>
+			</aside>
 			<?php endif; ?>
 		</div>
 		<hr />
 		<?php if (!$this->countModules('status')): ?>
-			<div class="footer">
+			<footer class="footer">
 				<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
-			</div>
+			</footer>
 		<?php endif; ?>
 	</div>
 	<?php if ($this->countModules('status')): ?>
