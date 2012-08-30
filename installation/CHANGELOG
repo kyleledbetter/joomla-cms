@@ -26,6 +26,21 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+30-Aug-2012 Rouven Weßling
+ ^ Move JEditor to the CMS libraries.
+ # [#29010] Fix E_NOTICE in JFormFieldMedia
+
+29-Aug-2012 Jean-Marie Simonet
+ # [#28980] Publication information should not have h2 styling. Thanks Elin
+ + [#28975] Add background color selector to protostar. Thanks Elin
+ # [#29014] *Firefox 14.0.1: Insert Image, Article or Pagebreak always inserts on top
+ # [#29004] *regression: protostar does not include the necessary css when inserting image in article
+
+28-Aug-2012 Rouven Weßling
+ ^ Reduce use of the deprecated JFile methods.
+ ^ Reduce use of the deprecated JRequest class.
+ ^ Reduce the amount of access to $_SERVER.
+
 27-Aug-2012 Jean-Marie Simonet
  # [#28376] Remove unnecessary files from com_media frontend. Thanks Michael
  # [#28858] Com_finder missing show_advanced_tips parameter => can't hide advanced tips. Thanks Michael
@@ -60,9 +75,6 @@ $ -> Language fix or change
 21-Aug-2012 Rouven Weßling
  ^ Merge latest platform (bf746b2389fbea9c0fa48ea015320c18beb8d0f3)
  ^ Remove use of the deprecated JProfiler::getMemory().
-
-20-Aug-2012 Rouven Weßling
- + Add setup for unit testing. Thanks Michael.
 
 20-Aug-2012 Jean-Marie Simonet
  # [#28943] *Allowing to disable admin menu bar collapse (Isis)
