@@ -113,7 +113,7 @@ textarea {
   clear: both;
 }
 .hide-text {
-  font: 0/0 a;
+  font: a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -5534,7 +5534,7 @@ fieldset.radio.btn-group {
   padding-left: 0;
 }
 /* iFrames */
-iframe {
+.iframe-bordered {
   border: 1px solid #dddddd;
 }
 /* Tabbed Content */

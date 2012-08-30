@@ -5541,7 +5541,7 @@ fieldset.radio.btn-group {
   padding-left: 0;
 }
 /* iFrames */
-iframe {
+.iframe-bordered {
   border: 1px solid #dddddd;
 }
 /* Tabbed Content */
