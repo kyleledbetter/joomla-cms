@@ -6159,11 +6159,12 @@ body {
 .view-login .input-medium {
   width: 184px;
 }
-.login .chzn-drop {
-  width: 228px !important;
-}
 .login .chzn-single {
-  width: 220px !important;
+  width: 230px !important;
+}
+.login .chzn-container,
+.login .chzn-drop {
+  width: 238px !important;
 }
 /* Typography */
 .small {
@@ -6540,6 +6541,13 @@ h6 {
   .btn-toolbar > .btn-group,
   .btn-toolbar > .btn-group > .btn {
     width: 99% !important;
+  }
+  .login .chzn-single {
+    width: 222px !important;
+  }
+  .login .chzn-container,
+  .login .chzn-drop {
+    width: 230px !important;
   }
 }
 @media (max-width: 320px) {
