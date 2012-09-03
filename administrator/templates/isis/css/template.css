@@ -5414,6 +5414,12 @@ hr.hr-condensed {
 .row-striped .row-fluid [class*="span"] {
 	min-height: 10px;
 }
+.row-striped .row-fluid [class*="span"] {
+	margin-left: 8px;
+}
+.row-striped .row-fluid [class*="span"]:first-child {
+	margin-left: 0;
+}
 .list-condensed li {
 	padding: 4px 5px;
 }
