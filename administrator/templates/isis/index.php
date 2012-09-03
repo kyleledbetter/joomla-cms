@@ -41,39 +41,6 @@ $task     = $input->get('task', '');
 $itemid   = $input->get('Itemid', '');
 $sitename = $app->getCfg('sitename');
 
-if ($task === "edit" || $layout === "form" )
-{
-	$fullWidth = 1;
-}
-else
-{
-	$fullWidth = 0;
-}
-
-$cpanel = $option === "com_cpanel";
-
-// Adjusting content width
-if ($cpanel)
-{
-	$span = "span8";
-}
-elseif ($this->countModules('left') && $this->countModules('right'))
-{
-	$span = "span6";
-}
-elseif ($this->countModules('left') && !$this->countModules('right'))
-{
-	$span = "span10";
-}
-elseif (!$this->countModules('left') && $this->countModules('right'))
-{
-	$span = "span8";
-}
-else
-{
-	$span = "span12";
-}
-
 $showSubmenu = false;
 $this->submenumodules = JModuleHelper::getModules('submenu');
 foreach ($this->submenumodules as $submenumodule)
@@ -130,7 +97,7 @@ else
 	?>
 </head>
 
-<body class="site <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " ";?>" data-spy="scroll" data-target=".subhead" data-offset="87">
+<body class="admin <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " ";?>" data-spy="scroll" data-target=".subhead" data-offset="87">
 	<!-- Top Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
@@ -211,15 +178,6 @@ else
 	<!-- container-fluid -->
 	<div class="container-fluid container-main">
 		<div class="row-fluid">
-			<?php if (($this->countModules('left')) && $cpanel): ?>
-			<!-- Begin Sidebar -->
-			<aside id="sidebar" class="span2">
-				<nav class="sidebar-nav">
-					<jdoc:include type="modules" name="left" style="no" />
-				</nav>
-			</aside>
-			<!-- End Sidebar -->
-			<?php endif; ?>
 			<section id="content" class="<?php echo $span;?>">
 				<!-- Begin Content -->
 				<jdoc:include type="modules" name="top" style="xhtml" />
@@ -240,18 +198,6 @@ else
 				<jdoc:include type="modules" name="bottom" style="xhtml" />
 				<!-- End Content -->
 			</section>
-			<?php if (($this->countModules('right')) || $cpanel) : ?>
-			<aside id="aside" class="span4">
-				<!-- Begin Right Sidebar -->
-				<?php
-				/* Load cpanel modules */
-				if ($cpanel):?>
-					<jdoc:include type="modules" name="icon" style="well" />
-				<?php endif;?>
-				<jdoc:include type="modules" name="right" style="xhtml" />
-				<!-- End Right Sidebar -->
-			</aside>
-			<?php endif; ?>
 		</div>
 		<hr />
 		<?php if (!$this->countModules('status')): ?>
