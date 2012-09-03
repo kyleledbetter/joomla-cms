@@ -177,28 +177,25 @@ else
 	</div>
 	<!-- container-fluid -->
 	<div class="container-fluid container-main">
-		<div class="row-fluid">
-			<section id="content" class="<?php echo $span;?>">
-				<!-- Begin Content -->
-				<jdoc:include type="modules" name="top" style="xhtml" />
-				<div class="row-fluid">
-					<?php if ($showSubmenu) : ?>
-						<div class="span2">
-							<jdoc:include type="modules" name="submenu" style="none" />
-						</div>
-						<div class="span10">
-					<?php else : ?>
-						<div class="span12">
-					<?php endif; ?>
-							<jdoc:include type="message" />
-							<jdoc:include type="component" />
-						</div>
-					</span>
-				</div>
-				<jdoc:include type="modules" name="bottom" style="xhtml" />
-				<!-- End Content -->
-			</section>
-		</div>
+		<section id="content">
+			<!-- Begin Content -->
+			<jdoc:include type="modules" name="top" style="xhtml" />
+			<div class="row-fluid">
+				<?php if ($showSubmenu) : ?>
+					<div class="span2">
+						<jdoc:include type="modules" name="submenu" style="none" />
+					</div>
+					<div class="span10">
+				<?php else : ?>
+					<div class="span12">
+				<?php endif; ?>
+						<jdoc:include type="message" />
+						<jdoc:include type="component" />
+					</div>
+			</div>
+			<jdoc:include type="modules" name="bottom" style="xhtml" />
+			<!-- End Content -->
+		</section>
 		<hr />
 		<?php if (!$this->countModules('status')): ?>
 			<footer class="footer">
