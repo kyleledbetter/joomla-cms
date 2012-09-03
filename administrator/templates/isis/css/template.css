@@ -6422,3 +6422,9 @@ ul.manager .height-50 .icon-folder-2 {
 	line-height: 35px;
 	font-size: 30px;
 }
+.moor-box {
+	z-index: 3;
+}
+.admin .chzn-container .chzn-drop {
+	z-index: 1200;
+}
