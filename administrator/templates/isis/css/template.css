@@ -6237,7 +6237,8 @@ h6 {
 .sidebar-nav .nav-list > li.active > a {
 	color: #fff;
 }
-.container-main {
+.container-main,
+#system-debug {
 	padding-bottom: 50px;
 }
 #status {
