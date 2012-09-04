@@ -67,10 +67,10 @@ $input = JFactory::getApplication()->input;
 							<div class="btn-group"><a class="btn" href="#" id="upload-browse"><i class="icon-folder"></i> <?php echo JText::_('COM_MEDIA_BROWSE_FILES'); ?></a><a class="btn" href="#" id="upload-clear"><i class="icon-remove"></i> <?php echo JText::_('COM_MEDIA_CLEAR_LIST'); ?></a></div>
 							<div class="btn-group"><a class="btn btn-primary" href="#" id="upload-start"><i class="icon-upload icon-white"></i> <?php echo JText::_('COM_MEDIA_START_UPLOAD'); ?></a></div>
 						</div>
-						<div class="clearfix"> </div>
+						<div class="clearfix"></div>
 						<p class="overall-title"></p>
 						<div class="overall-progress"></div>
-						<div class="clr"> </div>
+						<div class="clearfix"></div>
 						<p class="current-title"></p>
 						<div class="current-progress"></div>
 						<p class="current-text"></p>
