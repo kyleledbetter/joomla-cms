@@ -6218,7 +6218,7 @@ h6 {
 .navigation .nav > li {
 	position: relative;
 }
-.navigation .nav > li:hover .nav-child,
+.navigation .nav > li:hover > .nav-child,
 .navigation .nav > li > a:focus + .nav-child {
 	display: block;
 }
