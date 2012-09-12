@@ -16,6 +16,7 @@ $app   = JFactory::getApplication();
 $doc   = JFactory::getDocument();
 $lang  = JFactory::getLanguage();
 $this->language = $doc->language;
+$this->direction = $doc->direction;
 $input = $app->input;
 $user  = JFactory::getUser();
 
