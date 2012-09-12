@@ -15,6 +15,7 @@ $params = JFactory::getApplication()->getTemplate(true)->params;
 $app   = JFactory::getApplication();
 $doc   = JFactory::getDocument();
 $lang  = JFactory::getLanguage();
+$this->language = $doc->language;
 $input = $app->input;
 $user  = JFactory::getUser();
 
@@ -55,7 +56,7 @@ else
 }
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php echo $this->title; ?> <?php echo $this->error->getMessage();?></title>
@@ -68,7 +69,7 @@ else
 	if ($this->direction == 'rtl')
 	{
 	?>
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/media/jui/bootstrap-rtl.css" type="text/css" />
+		<link rel="stylesheet" href="<?php echo JURI::root() ?>/media/jui/css/bootstrap-rtl.css" type="text/css" />
 	<?php	
 	}
 	// Load specific language related CSS
