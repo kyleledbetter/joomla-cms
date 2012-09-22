@@ -43,7 +43,6 @@ JHtml::_('behavior.framework');
 			<?php echo $this->escape($this->item->title); ?>
 			<?php endif; ?>
 		</h2>
-		<?php endif; ?>
 		<?php if ($this->item->state == 0): ?>
 			<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
 		<?php endif; ?>
@@ -62,6 +61,7 @@ JHtml::_('behavior.framework');
 		<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
 		<?php endif; ?>
 		</small>
+		<?php endif; ?>
 	</div>
 	<?php endif; ?>
 
